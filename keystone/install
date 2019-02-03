@@ -1,4 +1,20 @@
 #!/bin/bash -ex
 
-ctf-tools-pip install -U keystone-engine
-ctf-tools-pip3 install -U keystone-engine
+[ -e keystone ] || git clone --depth 1 https://github.com/keystone-engine/keystone.git keystone
+
+# Compile and install keystone
+cd keystone
+mkdir build
+cd build
+../make-share.sh
+sudo make install
+cd ..
+
+cd bindings/python
+ctf-tools-pip install .
+ctf-tools-pip3 install .
+
+# Update shared library paths
+sudo sed -i -e '$a/usr/local/lib' /etc/ld.so.conf
+sudo sed -i -e '$a/usr/local/lib64' /etc/ld.so.conf
+sudo ldconfig

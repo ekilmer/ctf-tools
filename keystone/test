@@ -11,4 +11,4 @@ ks = Ks(KS_ARCH_X86, KS_MODE_32)
 encoding, count = ks.asm(CODE)
 EOF
 
-#kstool x32 "add eax, ebx"
+kstool x32 "add eax, ebx"
