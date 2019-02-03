@@ -119,7 +119,7 @@ EOF
 
 function base_build_setup_fedora()
 {
-	PACKAGE_REQS="libtool gcc gcc-c++ clang cmake texinfo curl wget automake autoconf python python-devel git subversion unzip python-virtualenvwrapper redhat-rpm-config"
+	PACKAGE_REQS="libtool gcc gcc-c++ clang cmake texinfo curl wget automake autoconf python python-devel git subversion unzip python2-virtualenvwrapper python3-virtualenvwrapper dnf-plugins-core redhat-rpm-config"
 	if [ "$ALLOW_SUDO" -eq 1 ]; then
 		sudo dnf -y install $PACKAGE_REQS
 	else
