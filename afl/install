@@ -14,6 +14,13 @@ if which python2 >/dev/null; then
     sed -i 's/python/python2/' ./build_qemu_support.sh
     sed -i 's!configure!configure --python=\$(which python2)!' ./build_qemu_support.sh
 fi
+
+# Patch for memfd in recent glibc
+# TODO Do we need to add check for glibc and afl version?
+# https://github.com/qemu/qemu/commit/75e5b70e6b5dcc4f2219992d7cffa462aa406af0
+wget -O patches/memfd.diff https://github.com/qemu/qemu/commit/75e5b70e6b5dcc4f2219992d7cffa462aa406af0.diff
+sed -i "133ipatch -p1 <../patches/memfd.diff || exit 1" ./build_qemu_support.sh
+
 ./build_qemu_support.sh
 cd ../../
 

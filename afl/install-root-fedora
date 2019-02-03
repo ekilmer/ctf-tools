@@ -1,0 +1,5 @@
+#!/bin/bash -ex
+set -eu -o pipefail
+
+dnf install -y bison glib2-devel
+dnf builddep -y qemu
