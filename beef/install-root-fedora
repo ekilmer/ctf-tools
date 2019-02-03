@@ -1,0 +1,4 @@
+#!/bin/bash -ex
+
+dnf install -y openssl-devel readline-devel zlib-devel libyaml-devel \
+  libffi-devel bzip2 bison sqlite-devel nodejs ruby-devel rubygem-bundler
