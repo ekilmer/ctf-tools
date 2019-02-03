@@ -2,4 +2,6 @@
 set -eu -o pipefail
 
 dnf install -y bison glib2-devel
+
+dnf install -y dnf-plugins-core
 dnf builddep -y qemu
