@@ -1,3 +1,4 @@
 #!/bin/bash -ex
+set -eu -o pipefail
 
-dnf install -y texinfo
+dnf install -y texinfo guile-devel
