@@ -1,6 +1,9 @@
 from base/archlinux
 
-RUN cat /etc/pacman.d/mirrorlist \ 
+RUN pacman -Sy \
+    && pacman -S --noconfirm pacman-contrib
+
+RUN cat /etc/pacman.d/mirrorlist \
         | sed 's/^#Server/Server/' \
         > /etc/pacman.d/mirrorlist.backup \
         && rankmirrors -n 10 /etc/pacman.d/mirrorlist.backup \
