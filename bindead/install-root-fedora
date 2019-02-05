@@ -1,0 +1,4 @@
+#!/bin/bash -ex
+set -eu -o pipefail
+
+dnf install -y maven java-openjdk-devel java-openjdk

@@ -16,9 +16,9 @@ env:
 - DISTRO='archlinux' EXPECTFAIL=1 TOOL='angr barf beef bindead capstone codereason dislocker elfparser gdb-heap hash-identifier hashkill littleblackbox mitmproxy panda pathgrind preeny python-pin reveng ropper shellsploit snowman sonic-visualizer stegdetect villoc wcc xspy' # estimated 764 seconds
 # - DISTRO='archlinux' TOOL='qemu' # unknown duration...
 - DISTRO='fedora' TOOL='qemu' # estimated 2160 seconds
-- DISTRO='fedora' TOOL='android-sdk beef featherduster gdb-heap keystone pwndbg pwntools wcc' # estimated 2160 seconds
+- DISTRO='fedora' TOOL='android-sdk beef bindead featherduster gdb-heap keystone pwndbg pwntools wcc' # estimated 2160 seconds
 - DISTRO='fedora' TOOL='afl apktool barf binwalk burpsuite capstone checksec commix cribdrag dirsearch elfkickers evilize exetractor foresight gdb gef jdgui libheap pdf-parser peda peepdf pkcrack python-paddingoracle pyvmmonitor radare2 ropper rp++ scrdec18 shellnoob shellsploit ssh_decoder steganabara stegsolve subbrute unicorn virtualsocket xortool yafu z3' # estimated 1779 seconds
-- DISTRO='fedora' EXPECTFAIL=1 TOOL='angr bindead codereason df dirb dislocker elfparser firmware-mod-kit hash-identifier hashkill hashpump hashpump-partialhash honggfuzz littleblackbox mitmproxy msieve panda pathgrind pemcrack preeny python-pin qira reveng snowman sonic-visualizer sqlmap sslsplit stegdetect taintgrind testdisk tor-browser veles villoc xrop xspy zsteg' # estimated 549 seconds
+- DISTRO='fedora' EXPECTFAIL=1 TOOL='angr codereason df dirb dislocker elfparser firmware-mod-kit hash-identifier hashkill hashpump hashpump-partialhash honggfuzz littleblackbox mitmproxy msieve panda pathgrind pemcrack preeny python-pin qira reveng snowman sonic-visualizer sqlmap sslsplit stegdetect taintgrind testdisk tor-browser veles villoc xrop xspy zsteg' # estimated 549 seconds
 - DISTRO='trusty' TOOL='barf capstone jdgui stegdetect yafu z3' # estimated 1995 seconds
 - DISTRO='trusty' TOOL='qemu' # estimated 2160 seconds
 - DISTRO='trusty' TOOL='apktool bindead featherduster gdb qira snowman' # estimated 1976 seconds
