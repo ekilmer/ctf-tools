@@ -1,0 +1,10 @@
+#!/bin/bash -ex
+
+cd barf-project/
+
+ctf-tools-pip install nose
+ctf-tools-pip install coverage
+
+nosetests --cover-erase --with-coverage --cover-package=barf --cover-tests
+
+cd ..

@@ -1,18 +1,11 @@
 #!/bin/bash -ex
 
-# it's z3!
-ctf-tools-pip install https://github.com/zardus/z3/archive/pypy-and-setup.zip
+ctf-tools-pip install z3-solver
 
 set +e
 source ${VIRTUALENVWRAPPER_SCRIPT}
 workon ctftools
 set -e
-
-# pybfd can't be installed with pip
-git clone --depth 1 https://github.com/Groundworkstech/pybfd
-cd pybfd/
-python setup.py install
-cd ..
 
 # install pyasmjit
 git clone --depth 1 https://github.com/programa-stic/pyasmjit.git
