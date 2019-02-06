@@ -10,10 +10,10 @@ before_install:
 
 env:
 
-- DISTRO='archlinux' TOOL='afl android-sdk apktool binwalk burpsuite checksec df dirb elfkickers evilize featherduster firmware-mod-kit gdb hashpump hashpump-partialhash honggfuzz jdgui keystone libheap msieve pkcrack pwndbg pwntools python-paddingoracle pyvmmonitor radare2 sqlmap sslsplit testdisk tor-browser unicorn veles virtualsocket xortool xrop yafu zsteg' # estimated 2000 seconds
-- DISTRO='archlinux' TOOL='commix cribdrag dirsearch exetractor foresight gef pdf-parser peda peepdf pemcrack rp++ scrdec18 shellnoob ssh_decoder steganabara stegsolve subbrute' # estimated 16 seconds
+- DISTRO='archlinux' TOOL='afl android-sdk apktool binwalk burpsuite checksec df dirb elfkickers evilize featherduster gdb hashpump hashpump-partialhash honggfuzz jdgui libheap msieve pkcrack pwndbg pwntools python-paddingoracle pyvmmonitor radare2 sqlmap testdisk unicorn virtualsocket xortool xrop yafu zsteg' # estimated 2000 seconds
+- DISTRO='archlinux' TOOL='beef commix cribdrag dirsearch exetractor foresight gdb-heap gef pdf-parser peda peepdf pemcrack rp++ scrdec18 shellnoob ssh_decoder steganabara stegsolve subbrute wcc'  # estimated 16 seconds
 - DISTRO='archlinux' EXPECTFAIL=1 TOOL='qira taintgrind z3' # estimated 1831 seconds
-- DISTRO='archlinux' EXPECTFAIL=1 TOOL='angr barf beef bindead capstone codereason dislocker elfparser gdb-heap hash-identifier hashkill littleblackbox mitmproxy panda pathgrind preeny python-pin reveng ropper shellsploit snowman sonic-visualizer stegdetect villoc wcc xspy' # estimated 764 seconds
+- DISTRO='archlinux' EXPECTFAIL=1 TOOL='angr barf bindead capstone codereason dislocker elfparser firmware-mod-kit hash-identifier hashkill keystone littleblackbox mitmproxy panda pathgrind preeny python-pin reveng ropper shellsploit sslsplit snowman sonic-visualizer stegdetect tor-browser veles villoc xspy' # estimated 764 seconds
 # - DISTRO='archlinux' TOOL='qemu' # unknown duration...
 - DISTRO='fedora' TOOL='qemu' # estimated 2160 seconds
 - DISTRO='fedora' TOOL='android-sdk beef bindead codereason featherduster gdb-heap keystone pwndbg pwntools wcc' # estimated 2160 seconds
