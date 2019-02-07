@@ -1,4 +1,4 @@
-from base/archlinux
+from archlinux/base
 
 RUN pacman -Sy \
     && pacman -S --noconfirm pacman-contrib
